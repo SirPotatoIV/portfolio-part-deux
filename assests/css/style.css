@@ -1,3 +1,41 @@
-h1 {
-    color: red;
+h1{
+    font-size: 36px;
+    color: green;
+    font-weight: bold;
 }
+.container-header{
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(121, 129, 241);
+}
+    .col-logo{
+        grid-row-start: 1;
+        grid-column-start: 2;
+    }
+    .col-links{
+        grid-row-start: 1;
+        grid-column-start: 3;
+    }
+
+    .links{
+        display: flex;
+    }
+    .links li a{
+        padding: 4px;
+        text-decoration: none;
+        font-weight: bold;
+        color: gray;
+
+    }
+
+/* .row-main{
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.row-footer{
+    grid-area: "footer";
+} */
