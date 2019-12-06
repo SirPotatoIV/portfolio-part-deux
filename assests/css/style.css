@@ -4,6 +4,18 @@ h1{
     font-weight: bold;
 }
 
+h2{
+    font-family: 'Bebas Neue', cursive;
+    padding: 8px;
+}
+
+/* https://www.w3schools.com/howto/howto_css_image_responsive.asp */
+img{
+    width: 100%;
+    height: auto;
+}
+
+
 .flex{
     display: flex;
 }
@@ -22,55 +34,76 @@ h1{
     background-color: #A9E5BB;
     font-family: 'Montserrat', sans-serif;
 }
-    .col-logo{
-        grid-row-start: 1;
-        grid-column-start: 2;
-    }
-    .col-links{
-        grid-row-start: 1;
-        grid-column-end: 4;
-    }
-    .links li a{
-        padding: 4px;
-        text-decoration: none;
-        font-weight: bold;
-        color: gray;
-
-    }
-    .col-contact{
-        grid-row-start: 2;
+.col-logo{
+    grid-row-start: 1;
+    grid-column-start: 2;
+}
+.col-links{
+    grid-row-start: 1;
+    grid-column-end: 4;
+}
+.links li a{
+    padding: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    color: gray;
+    
+}
+.col-contact{
+    grid-row-start: 2;
         grid-column-start: 2;
         grid-column-end: span 2;
         display: flex;
     }
     .col-contact li{
         padding: 0px 8px 0px 8px;
-
+        
     }
-
-/* Main section styling */
-.container-main{
-    display: grid;
-    grid-template-rows: auto 1fr 1fr;
-    grid-template-columns: 10% 1fr 1fr 10%;
-    align-items: center;
-    justify-items: center;
-    /* background-color: #FCF6B1; */
-}
-    .main-header{
+    
+    /* Main section styling */
+    .container-main{
+        display: inline-grid;
+        grid-template-rows: auto 1fr 1fr;
+        grid-template-columns: 20px 1fr 1fr 20px;
+        background-color: #FCF6B1;
+        grid-auto-flow: column;
+        padding: 10px 0px 10px 0px;
+    }
+    
+    .main-title{
         grid-row-start:1;
         grid-column-start: 2;
         grid-column-end: span 2;
+        align-self: center;
+        justify-self: center;
+        font-family: 'Bebas Neue', cursive;
+        padding: 8px;
     }
-
+    
     .main-row-1{
+        display: grid;
         grid-row-start: 2;
-        grid-column-start: 2;
+        justify-items: center;
+        
     }
     .main-row-2{
+        display: grid; 
         grid-row-start:3;
+        justify-items: center;
+        
     }
-
+    .project-links li{
+        padding: 0px 4px 0px 4px;
+    }
+    .project-links a{
+        padding: 4px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #E3170A;
+        font-family: 'Montserrat', sans-serif;
+        border: 2px solid #E3170A;
+        border-radius: 1rem;
+    }
 /* Footer section styling */
 .container-footer{
     display: grid;
