@@ -1,12 +1,6 @@
-h1{
-    font-size: 36px;
-    color: #2D1E2F;
-    font-weight: bold;
-}
-
 h2{
     font-family: 'Bebas Neue', cursive;
-    font-size: 24px;
+    font-size: 30px;
     padding: 8px;
 }
 
@@ -15,7 +9,6 @@ img{
     width: 100%;
     height: auto;
 }
-
 
 .flex{
     display: flex;
@@ -38,6 +31,9 @@ img{
     .col-logo{
         grid-row-start: 1;
         grid-column-start: 2;
+        font-size: 36px;
+        color: #2D1E2F;
+        font-weight: bold;
     }
     .col-links{
         grid-row-start: 1;
@@ -58,45 +54,47 @@ img{
         }
         .col-contact li{
             padding: 0px 8px 0px 8px;
-            
         }
         
 /* Main section styling */
 .container-main{
     display: grid;
-    grid-template-rows: auto 1fr 1fr;
-    grid-template-columns:  1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-columns:  10% 80% 10%;
+
     /* background-color: #FCF6B1; */
     /* grid-auto-flow: row; */
     padding: 10px 20px 10px 20px;
 }
     
     .main-title{
-        grid-row-start:1;
-        grid-column-start: 1;
-        grid-column-end: span 2;
+        grid-row: 1/2;
+        grid-column: 2/3;
         align-self: center;
         justify-self: center;
         font-family: 'Bebas Neue', cursive;
-        padding: 8px;
+        font-size: 42px;
+        color: #2D1E2F;
+        /* font-weight: bold; */
+        /* padding: 8px; */
     }
     
-    .main-row-1{
-        display: grid;
-        grid-row-start: 2;
-        justify-items: center;
-        padding: 10px 0px 10px 0px;
-        
+    .tile-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        grid-row: 2/3;
+        grid-column: 2/3;
+        justify-content: center;
     }
-    .main-row-2{
-        display: grid; 
-        grid-row-start:3;
-        justify-items: center;
-        padding: 10px 0px 10px 0px;
-        
+
+    .tile {
+        flex: 0 0 92%;
+        margin: 4%;
     }
+
     .project-links li{
-        padding: 0px 4px 0px 4px;
+        padding: 10px 4px 10px 4px;
     }
     .project-links a{
         padding: 4px;
@@ -124,3 +122,31 @@ img{
         color: #A9E5BB;
         padding: 8px;
     }
+    /* Sizes taken from bootstrap */
+    
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .tile-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        grid-row: 2/3;
+        grid-column: 2/3;
+        justify-items: center;
+    }
+
+    .tile {
+        flex: 0 0 42%;
+        margin: 4%;
+    }
+}
+
+/* Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+} */
