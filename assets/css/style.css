@@ -9,7 +9,6 @@ h2{
 img{
     width: 100%;
     height: auto;
-    box-shadow: 10px 10px gray;
 }
 
 .flex{
@@ -19,7 +18,11 @@ img{
 .bold{
     font-weight: bold;
 }
-
+.title{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 42px;
+    color: #2D1E2F;
+}
 /* Header section styling */
 .container-header{
     display: grid;
@@ -70,19 +73,16 @@ img{
 /* Main section styling */
 .container-main{
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-columns:  10% 80% 10%;
     padding: 10px 20px 10px 20px;
 }
     
-    .main-title{
+    .main-header{
         grid-row: 1/2;
         grid-column: 2/3;
         align-self: center;
         justify-self: center;
-        font-family: 'Bebas Neue', cursive;
-        font-size: 42px;
-        color: #2D1E2F;
     }
     
     .tile-container {
@@ -103,6 +103,9 @@ img{
         display: flex;
         flex-direction: column;
     }
+    .tile img{
+        box-shadow: 10px 10px gray;
+    }
 
     .project-links li{
         margin: 30px 4px 0px 4px;
@@ -122,6 +125,25 @@ img{
     .project-links a:hover{
         box-shadow: 4px 4px gray;
     }
+
+    .bio-container{
+        grid-row: 3/4;
+        grid-column: 2/3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0px 20px 0px;
+    }
+    .bio-header{
+        align-self: center;
+        justify-self: center;
+    }
+    .profile-picture{
+        justify-self: center;
+    }
+    .bio{
+        font-family: 'Montserrat', sans-serif;
+    }
 /* Footer section styling */
 .container-footer{
     display: grid;
@@ -133,7 +155,6 @@ img{
     font-family: 'Montserrat', sans-serif;
     
 }
-
     .footer-text{
         grid-column-start: 2;
         color: #A9E5BB;
@@ -181,6 +202,35 @@ img{
 
     .project-links a{
         font-size: 16px;
+    }
+
+    .bio-container{
+        grid-row: 3/4;
+        grid-column: 2/3;
+        display: grid;
+        grid-template-rows: 5% 20% 70% 5%;
+        grid-template-columns: 10% 20% 60% 10%;
+        gap: 10px 30px;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .bio-header{
+        grid-row: 2/3;
+        grid-column: 2/4;
+        align-self: center;
+        justify-self: center;
+    }
+    .profile-picture{
+        grid-row: 3/4;
+        grid-column: 2/3;
+        width: auto;
+        height: 100%;
+        justify-self: center;
+    }
+    .bio{
+        grid-row: 3/4;
+        grid-column: 3/4;
+        font-family: 'Montserrat', sans-serif;
     }
 }
 
